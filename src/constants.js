@@ -1,5 +1,5 @@
-export const CATEGORIES = ['Books', 'Calculators', 'Lab equipment', 'Stationery', 'Electronics', 'Other'];
-export const CONDITIONS = ['New', 'Like new', 'Good', 'Used'];
+export const CATEGORIES = ['Books', 'Calculators', 'PYQ', 'Electronics', 'Other'];
+export const CONDITIONS = ['New', 'Good', 'Used'];
 export const COLORS = {
   primary: '#1565C0', danger: '#C62828', muted: '#757575',
   card: '#F5F5F5', border: '#DDDDDD', ok: '#2E7D32',
