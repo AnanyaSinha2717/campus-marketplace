@@ -23,7 +23,7 @@ export default function HomeScreen({ navigation }) {
     });
   }, [navigation]);
 
-  // Live updates: list refreshes by itself when anyone posts or edits
+  // live updates
   useEffect(() => {
     const qy = query(collection(db, 'listings'), orderBy('createdAt', 'desc'), limit(200));
     return onSnapshot(
@@ -50,7 +50,7 @@ export default function HomeScreen({ navigation }) {
         <Btn title="My listings" kind="outline" style={{ flex: 1 }} onPress={() => navigation.navigate('MyListings')} />
         <Btn title="Messages" kind="outline" style={{ flex: 1 }} onPress={() => navigation.navigate('Chats')} />
       </View>
-      <TextInput style={s.input} placeholder="Search books, calculators..." value={q} onChangeText={setQ} />
+      <TextInput style={s.input} placeholder="Search item..." value={q} onChangeText={setQ} />
       <View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingVertical: 8 }}>
           {[null, ...CATEGORIES].map((c) => (
