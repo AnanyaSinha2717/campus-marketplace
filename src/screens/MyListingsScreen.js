@@ -9,8 +9,9 @@ export default function MyListingsScreen({ navigation }) {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    // single equality filter: no Firestore index needed; sorted in the app
+
     const qy = query(collection(db, 'listings'), where('sellerId', '==', auth.currentUser.uid));
+    
     return onSnapshot(
       qy,
       (snap) =>
